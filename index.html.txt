@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fish Species Prediction </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="banner">
+    </div>    
+    <div class = "content">
+        <h1>Enter the Specification of the Fish to find the Species</h1>
+    </div>
+    <div class="Form">
+       <form action="{{ url_for('pred')}}" method="post">
+            <div class="InputBox">
+                <input type="number" name="Weight" id="Weight" placeholder="Weight" required>
+            </div>
+            <div class="InputBox">
+                <input type="number" name="Lenth" id="Length 1" placeholder="Length" required>
+            </div>
+            <div class="InputBox">
+                <input type="number" name="Lenth 2" id="Length 2" placeholder="Length" required>
+            </div>
+             <div class="InputBox">
+                <input type="number" name="Lenth 3" id="Length 3" placeholder="Length" required>
+            </div>
+             <div class="InputBox">
+                <input type="number" name="Height " id="Height" placeholder="Height" required>
+            </div>
+             <div class="InputBox">
+                <input type="number" name="Width" id="Width" placeholder="Width" required>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict Species</button>      
+            </div>
+     
+        </form>
+     </div>  
+    <div class="Pred">       
+       <br>
+       <br>
+       {{ prediction_text }}
+     </div>
+    
+</body>
+</html>
